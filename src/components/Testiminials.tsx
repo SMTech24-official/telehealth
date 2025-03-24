@@ -80,7 +80,7 @@ const Testimonials = () => {
             transition={{ duration: 0.4, ease: "easeIn" }} className=' bg-primary'>
             <div className="container section-gap">
                 <div className=' !text-white'>
-                    <SectionTitle white miniTitle='Testimonials' subtitle='Hear from our satisfied clients and discover how we’ve helped them achieve their career goals and success' title='What’s Our Client’s Says' />
+                    <SectionTitle white miniTitle='Testimonials' subtitle='Hear from our satisfied clients who have found clarity, confidence, and healing through our therapy sessions. Their stories reflect the care, support, and transformation we bring to every journey. ' title='What client says ?' />
                 </div>
                 <div className="relative">
                     <Swiper
@@ -159,7 +159,7 @@ export function TestimonialCard({
                     className="object-contain w-14 h-14 rounded-full"
                 />
                 <div className='mt-4'>
-                    <p className="text-md font-medium text-white">
+                    <p className="text-xl font-medium text-white">
                         {author}
                     </p>
                     <p className="mt-1 text-sm text-white/80">{company}</p>

@@ -11,7 +11,7 @@ const PrimaryButton = ({
     children?: React.ReactNode;
 }) => {
     return children ? (
-        <div onClick={onClick} className="px-5 cursor-pointer py-2 rounded-full bg-secondary/80 transition-all duration-300 text-white hover:bg-secondary shadow">{children}</div>
+        <div onClick={onClick} className="xl:px-6 px-4 py-2 xl:py-4  cursor-pointer rounded-full bg-secondary/80 transition-all duration-300 text-white hover:bg-secondary shadow">{children}</div>
     ) : (
         <button
             type="submit"
