@@ -96,8 +96,8 @@ export default {
 
           // For extra-large screens (xl)
           "@screen xl": {
-            paddingLeft: "120px",
-            paddingRight: "120px",
+            paddingLeft: "50px",
+            paddingRight: "50px",
           },
           "@screen 2xl": {
             paddingLeft: "4px",

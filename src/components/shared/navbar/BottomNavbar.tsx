@@ -2,19 +2,16 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
-import { BsPersonVideo } from "react-icons/bs"
-import { HiOutlineNewspaper } from "react-icons/hi"
-import { LiaBriefcaseSolid } from "react-icons/lia"
-import { RiProjectorLine } from "react-icons/ri"
-import { TiMessages } from "react-icons/ti"
+import { FaUserFriends, FaLaptopMedical, FaBriefcase, FaHandshake, FaPhoneAlt } from "react-icons/fa";
+
 
 const navItems = [
-    { icon: RiProjectorLine, label: "Projects", href: "/project" },
-    { icon: BsPersonVideo, label: "Consultation", href: "/consultation" },
-    { icon: LiaBriefcaseSolid, label: "Jobs", href: "/jobs" },
-    { icon: TiMessages, label: "Messages", href: "/messages" },
-    { icon: HiOutlineNewspaper, label: "Blogs", href: "/blog" },
-]
+    { icon: FaUserFriends, label: "Team", href: "/team" }, // Represents the team members or project-related work
+    { icon: FaLaptopMedical, label: "Services", href: "/services" }, // Medical services or telehealth consultation
+    { icon: FaBriefcase, label: "Telehealth", href: "/telehealth" }, // Telehealth or online healthcare services
+    { icon: FaHandshake, label: "Affiliate", href: "/affiliate" }, // Affiliate or partnership programs
+    { icon: FaPhoneAlt, label: "Contact", href: "/contact" }, // Contact information or support
+];
 
 const BottomNavbar = () => {
     const pathname = usePathname()

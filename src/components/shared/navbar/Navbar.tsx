@@ -25,24 +25,24 @@ export const navItems = [
             { name: "EMDR Consultation", link: "/consultation" },
         ],
     },
-    {
-        name: "Locations",
-        subLink: [
-            { name: "Lakewood", link: "/project" },
-            { name: "Colorado Springs", link: "/project" },
-            { name: "Denver", link: "/project" },
-            { name: "Aurora", link: "/project" },
-            { name: "Broomfield", link: "/project" },
-            { name: "Boulder", link: "/project" },
-            { name: "Glenwood Springs", link: "/project" },
-            { name: "Cherry Creek", link: "/project" },
+    // {
+    //     name: "Locations",
+    //     subLink: [
+    //         { name: "Lakewood", link: "/project" },
+    //         { name: "Colorado Springs", link: "/project" },
+    //         { name: "Denver", link: "/project" },
+    //         { name: "Aurora", link: "/project" },
+    //         { name: "Broomfield", link: "/project" },
+    //         { name: "Boulder", link: "/project" },
+    //         { name: "Glenwood Springs", link: "/project" },
+    //         { name: "Cherry Creek", link: "/project" },
 
-        ],
-    },
-    {
-        name: "Rates & Insurance ",
-        link: "/messaging",
-    },
+    //     ],
+    // },
+    // {
+    //     name: "Rates & Insurance ",
+    //     link: "/messaging",
+    // },
 
     {
         name: "Telehealth",
@@ -52,10 +52,10 @@ export const navItems = [
         name: "Affiliate",
         link: "/faq",
     },
-    {
-        name: "Blog",
-        link: "/faq",
-    },
+    // {
+    //     name: "Blog",
+    //     link: "/faq",
+    // },
     {
         name: "Contact",
         link: "/faq",
