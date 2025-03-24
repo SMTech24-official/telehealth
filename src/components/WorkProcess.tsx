@@ -1,170 +1,141 @@
-"use client"
-import React from 'react';
+import { LuArrowRight } from 'react-icons/lu';
 import SectionTitle from './shared/sectionTitle/SectionTitle';
-import { motion } from 'framer-motion';
 
 
 
-const ProcessCard = ({ title, steps }: { title: string; steps: Array<{ number: string; title: string; description: string }> }) => (
-    <div className="bg-gray-100 rounded-lg p-6 shadow-sm">
-        <h2 className="text-xl md:text-2xl xl:text-3xl font-semibold mb-6">{title}</h2>
-        <div className="space-y-6 relative">
-            {steps.map((step, index) => (
-                <div key={index} className="flex items-start gap-6 relative">
-                    {/* Ensure this div has relative positioning */}
-                    <div className="relative">
-                        {/* Step Number */}
-                        <div className="w-8 lg:w-12 lg:h-12 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-medium z-30 relative">
-                            {step.number}
-                        </div>
-
-                        {/* Vertical Line (hidden for the last step) */}
-                        {index !== steps.length - 1 && (
-                            <div className="absolute left-4 lg:left-6 xl:top-11 2xl:h-[calc(100%)] lg:h-[calc(100%+1.5rem)] h-[calc(100%+3rem)] border-l-2 border-dashed border-primary/80" />
-                        )}
-                    </div>
-
-                    {/* Step Content */}
-                    <div className="flex-1 pt-1">
-                        <h3 className="font-medium mb-3 text-xl">{step.title}</h3>
-                        <p className="text-gray-600 text-[16px]">{step.description}</p>
-                    </div>
-                </div>
-            ))}
-
-        </div>
-    </div>
-);
-
-
-function WorkProcess() {
-    const clientSteps = [
-        {
-            number: "01",
-            title: "Create a Profile",
-            description: "Showcase qualifications, skills & certifications."
-        },
-        {
-            number: "02",
-            title: "Post a Job",
-            description: "Describe your project and required skills."
-        },
-        {
-            number: "03",
-            title: "Review Proposals",
-            description: "Receive applications from qualified experts."
-        },
-        {
-            number: "04",
-            title: "Hire & Collaborate",
-            description: "Use messaging & video calls for discussions."
-        },
-        {
-            number: "05",
-            title: "Secure Payment",
-            description: "Funds held in escrow until job completion."
-        },
-        {
-            number: "06",
-            title: "Approve & Rate",
-            description: "Release payment & leave feedback."
-        }
-    ];
-
-    const talentSteps = [
-        {
-            number: "01",
-            title: "Create a Profile",
-            description: "Showcase qualifications, skills & certifications."
-        },
-        {
-            number: "02",
-            title: "Find Jobs & Apply",
-            description: "Browse listings and submit proposals."
-        },
-
-        {
-            number: "04",
-            title: "Get Paid Securely",
-            description: "Payment released upon project approval."
-        },
-        {
-            number: "05",
-            title: "Build Reputation",
-            description: "Earn ratings & reviews for future projects."
-        },
-        {
-            number: "03",
-            title: "Communicate & Work",
-            description: "Use built-in messaging & virtual sessions."
-        }
-    ];
-
-    const companySteps = [
-        {
-            number: "01",
-            title: "Create a Profile",
-            description: "Register your company and provide essential details."
-        },
-        {
-            number: "02",
-            title: "Post Job Listings",
-            description: "List job openings or freelance opportunities."
-        },
-        {
-            number: "03",
-            title: "Connect with Experts",
-            description: "Receive and evaluate proposals for posted jobs."
-        }
-    ];
-
-    return (
-        <div className=" container section-gap">
-            <SectionTitle
-                miniTitle="Steps"
-                subtitle="How Our Service Works for You"
-                title="How it Works"
-            />
-            <div className="lg:mt-12 md:mt-8 mt-6">
-                <motion.div
-                    initial={{ opacity: 0 }} // Start slightly below
-                    animate
-                    whileInView={{ opacity: 1 }} // Animate when in viewport
-                    viewport={{ once: true, amount: 0.2, }} // Trigger once when 20% visible
-                    transition={{ duration: 0.2, ease: "easeIn" }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <motion.div
-                        initial={{ opacity: 0 }} // Start slightly below
-                        animate
-                        whileInView={{ opacity: 1 }} // Animate when in viewport
-                        viewport={{ once: true, amount: 0.2, }} // Trigger once when 20% visible
-                        transition={{ duration: 0.5, ease: "easeIn" }}
-                    >
-                        <ProcessCard title="For Clients (Hiring)" steps={clientSteps} />
-                    </motion.div>
-                    <motion.div
-                        initial={{ opacity: 0 }} // Start slightly below
-                        animate
-                        whileInView={{ opacity: 1 }} // Animate when in viewport
-                        viewport={{ once: true, amount: 0.2, }} // Trigger once when 20% visible
-                        transition={{ duration: 0.7, ease: "easeIn" }}
-                    >
-                        <ProcessCard title="For Experts" steps={talentSteps} />
-                    </motion.div>
-                    <motion.div
-                        initial={{ opacity: 0 }} // Start slightly below
-                        animate
-                        whileInView={{ opacity: 1 }} // Animate when in viewport
-                        viewport={{ once: true, amount: 0.2, }} // Trigger once when 20% visible
-                        transition={{ duration: 0.9, ease: "easeIn" }}
-                    >
-                        <ProcessCard title="For Companies" steps={companySteps} />
-
-                    </motion.div>
-                </motion.div>
-            </div>
-        </div >
-    );
+const First = () => {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48" fill="none">
+        <g clip-path="url(#clip0_888_3148)">
+            <path d="M32.7305 5.62462C31.6926 5.62641 26.2903 5.6355 24.3867 5.63869V4.21847C24.3867 1.89244 22.4942 0 20.168 0H17.3555C15.0293 0 13.1367 1.89244 13.1367 4.21847V5.63869C12.7977 5.63812 4.94447 5.62519 4.60547 5.62462C3.82884 5.62462 3.19922 6.25416 3.19922 7.03078V46.5909C3.19922 47.3676 3.82884 47.9971 4.60547 47.9971H32.7305C33.5071 47.9971 34.1367 47.3676 34.1367 46.5909V7.03078C34.1367 6.25425 33.5071 5.62462 32.7305 5.62462ZM14.543 8.451C15.3196 8.451 15.9492 7.82147 15.9492 7.04484V4.21847C15.9492 3.44316 16.5801 2.81231 17.3555 2.81231H20.168C20.9434 2.81231 21.5742 3.44316 21.5742 4.21847V7.04484C21.5742 7.82147 22.2038 8.451 22.9805 8.451H25.704V11.2633H11.6391L11.6344 8.451H14.543ZM31.3242 45.1848H6.01172V8.43703H8.82187L8.829 12.672C8.83031 13.4477 9.45956 14.0758 10.2353 14.0758H27.1102C27.8869 14.0758 28.5165 13.4463 28.5165 12.6697V8.43703H31.3242V45.1848Z" fill="#2A4359" />
+            <path d="M17.2617 19.6865H10.2305C9.45384 19.6865 8.82422 20.3161 8.82422 21.0927C8.82422 21.8693 9.45384 22.4988 10.2305 22.4988H17.2617C18.0383 22.4988 18.668 21.8693 18.668 21.0927C18.668 20.3161 18.0383 19.6865 17.2617 19.6865Z" fill="#2A4359" />
+            <path d="M17.2617 28.1235H10.2305C9.45384 28.1235 8.82422 28.7531 8.82422 29.5297C8.82422 30.3063 9.45384 30.9358 10.2305 30.9358H17.2617C18.0383 30.9358 18.668 30.3063 18.668 29.5297C18.668 28.7531 18.0383 28.1235 17.2617 28.1235Z" fill="#2A4359" />
+            <path d="M17.2617 36.5601H10.2305C9.45384 36.5601 8.82422 37.1896 8.82422 37.9662C8.82422 38.7428 9.45384 39.3724 10.2305 39.3724H17.2617C18.0383 39.3724 18.668 38.7428 18.668 37.9662C18.668 37.1897 18.0383 36.5601 17.2617 36.5601Z" fill="#2A4359" />
+            <path d="M26.0643 18.6897L24.2415 20.5124L23.8296 20.1006C23.2805 19.5514 22.39 19.5514 21.8408 20.1006C21.2917 20.6498 21.2917 21.54 21.8408 22.0892L23.2471 23.4953C23.7962 24.0444 24.6866 24.0445 25.2358 23.4953L28.053 20.6783C28.6022 20.1292 28.6022 19.2389 28.053 18.6897C27.5039 18.1405 26.6135 18.1405 26.0643 18.6897Z" fill="#2A4359" />
+            <path d="M26.0643 35.5637L24.2415 37.3864L23.8296 36.9746C23.2805 36.4254 22.39 36.4254 21.8408 36.9746C21.2917 37.5238 21.2917 38.414 21.8408 38.9632L23.2471 40.3694C23.7962 40.9185 24.6866 40.9186 25.2358 40.3694L28.053 37.5524C28.6022 37.0032 28.6022 36.1129 28.053 35.5637C27.5039 35.0146 26.6135 35.0146 26.0643 35.5637Z" fill="#2A4359" />
+            <path d="M28.0528 26.4519C27.5037 25.9028 26.6133 25.9027 26.0641 26.4519L24.9749 27.5411L23.8857 26.4519C23.3366 25.9027 22.4462 25.9028 21.897 26.4519C21.3478 27.0011 21.3478 27.8914 21.897 28.4405L22.9862 29.5297L21.897 30.6189C21.3478 31.1681 21.3478 32.0584 21.897 32.6075C22.4461 33.1566 23.3365 33.1567 23.8857 32.6075L24.9749 31.5183L26.0641 32.6075C26.6132 33.1566 27.5035 33.1567 28.0528 32.6075C28.602 32.0583 28.602 31.168 28.0528 30.6189L26.9636 29.5297L28.0528 28.4405C28.602 27.8913 28.602 27.001 28.0528 26.4519Z" fill="#2A4359" />
+            <path d="M45.4852 38.06V8.99932C45.4852 7.19014 44.0132 5.71826 42.204 5.71826H40.3283C38.5197 5.71826 37.0477 7.18967 37.047 8.99839C37.0469 9.28939 37.038 38.0013 37.0386 38.0666C37.0404 38.4862 37.0185 38.1395 39.9214 47.0311C40.2488 48.024 41.2944 48.0097 41.257 47.997C41.8635 47.997 42.4017 47.6082 42.5921 47.0324C45.382 38.4781 45.4852 38.5361 45.4852 38.06ZM39.8572 16.9676H42.6727V36.6539H39.8513L39.8572 16.9676ZM40.3284 8.53057H42.204C42.4625 8.53057 42.6728 8.74086 42.6728 8.99932V14.1553H39.8581L39.8597 8.99932C39.8597 8.74086 40.07 8.53057 40.3284 8.53057ZM40.3889 39.4662H42.1326L41.2592 42.1064L40.3889 39.4662Z" fill="#2A4359" />
+        </g>
+        <defs>
+            <clipPath id="clip0_888_3148">
+                <rect width="48" height="48" fill="white" transform="translate(0.342285)" />
+            </clipPath>
+        </defs>
+    </svg>
 }
 
+const Second = () => {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48" fill="none">
+        <g clip-path="url(#clip0_888_3187)">
+            <path d="M37.0489 28.537L35.2307 26.7188L37.0488 24.9007C37.5981 24.3515 37.5981 23.4611 37.0488 22.9119C36.4997 22.3627 35.6093 22.3627 35.0601 22.9119L33.242 24.7301L31.4238 22.9119C30.8747 22.3627 29.9843 22.3627 29.4351 22.9119C28.8859 23.4611 28.8859 24.3514 29.4351 24.9006L31.2533 26.7188L29.4352 28.5369C28.886 29.0861 28.886 29.9764 29.4352 30.5256C29.9843 31.0747 30.8747 31.0748 31.4239 30.5256L33.242 28.7075L35.0602 30.5257C35.6093 31.0748 36.4997 31.0749 37.0489 30.5257C37.5981 29.9765 37.5981 29.0862 37.0489 28.537Z" fill="#2A4359" />
+            <path d="M20.1739 17.287L18.3557 15.4688L20.1738 13.6507C20.723 13.1015 20.723 12.2112 20.1738 11.662C19.6247 11.1128 18.7343 11.1128 18.1851 11.662L16.367 13.4801L14.5488 11.6619C13.9997 11.1127 13.1093 11.1127 12.5601 11.6619C12.0109 12.2111 12.0109 13.1014 12.5601 13.6506L14.3783 15.4688L12.5602 17.2869C12.0109 17.8361 12.0109 18.7265 12.5602 19.2757C13.1093 19.8248 13.9997 19.8249 14.5489 19.2757L16.367 17.4575L18.1852 19.2757C18.7343 19.8248 19.6247 19.8249 20.1739 19.2757C20.7231 18.7265 20.7231 17.8362 20.1739 17.287Z" fill="#2A4359" />
+            <path d="M39.8613 11.6621L37.0488 8.8496C37.046 8.84688 37.0431 8.84472 37.0404 8.842C36.4858 8.29619 35.5992 8.31063 35.06 8.8496L32.2475 11.6621C31.6984 12.2113 31.6984 13.1016 32.2475 13.6508C32.7966 14.2 33.6871 14.2 34.2363 13.6508L34.6482 13.2389V16.8752H24.8044C24.0278 16.8752 23.3982 17.5048 23.3982 18.2814V25.3127H20.3438C19.7633 23.6759 18.2002 22.5002 16.3669 22.5002C14.0407 22.5002 12.1482 24.3927 12.1482 26.7189C12.1482 29.0451 14.0407 30.9377 16.3669 30.9377C18.2002 30.9377 19.7633 29.7619 20.3438 28.1252H24.8044C25.5811 28.1252 26.2107 27.4955 26.2107 26.7189V19.6877H36.0544C36.8311 19.6877 37.4607 19.058 37.4607 18.2814V13.2389L37.8726 13.6508C38.1471 13.9253 38.507 14.0627 38.8669 14.0627C39.2269 14.0627 39.5868 13.9253 39.8613 13.6508C40.4104 13.1016 40.4104 12.2113 39.8613 11.6621ZM16.3669 28.1252C15.5915 28.1252 14.9607 27.4943 14.9607 26.7189C14.9607 25.9435 15.5915 25.3127 16.3669 25.3127C17.1423 25.3127 17.7732 25.9435 17.7732 26.7189C17.7732 27.4943 17.1423 28.1252 16.3669 28.1252Z" fill="#2A4359" />
+            <path d="M44.5857 0H5.02319C2.69697 0 0.804443 1.89253 0.804443 4.21875C0.804443 6.05203 1.98016 7.61512 3.61694 8.19563V32.3438C3.61694 34.67 5.50947 36.5625 7.83569 36.5625H23.3982V39.8044C21.7614 40.3849 20.5857 41.948 20.5857 43.7812C20.5857 46.1075 22.4782 48 24.8044 48C27.1307 48 29.0232 46.1075 29.0232 43.7812C29.0232 41.948 27.8475 40.3849 26.2107 39.8044V36.5625H41.7732C44.0994 36.5625 45.9919 34.67 45.9919 32.3438V8.19563C47.6287 7.61512 48.8044 6.05203 48.8044 4.21875C48.8044 1.89253 46.9119 0 44.5857 0ZM24.8044 45.1875C24.029 45.1875 23.3982 44.5567 23.3982 43.7812C23.3982 43.0058 24.029 42.375 24.8044 42.375C25.5798 42.375 26.2107 43.0058 26.2107 43.7812C26.2107 44.5567 25.5798 45.1875 24.8044 45.1875ZM43.1794 32.3438C43.1794 33.1192 42.5486 33.75 41.7732 33.75H7.83569C7.06029 33.75 6.42944 33.1192 6.42944 32.3438V8.4375H43.1794V32.3438ZM44.5857 5.625H5.02319C4.24779 5.625 3.61694 4.99416 3.61694 4.21875C3.61694 3.44334 4.24779 2.8125 5.02319 2.8125H44.5857C45.3611 2.8125 45.9919 3.44334 45.9919 4.21875C45.9919 4.99416 45.3611 5.625 44.5857 5.625Z" fill="#2A4359" />
+        </g>
+        <defs>
+            <clipPath id="clip0_888_3187">
+                <rect width="48" height="48" fill="white" transform="translate(0.804443)" />
+            </clipPath>
+        </defs>
+    </svg>
+}
+
+const Third = () => {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48" fill="none">
+        <g clip-path="url(#clip0_888_3270)">
+            <path d="M46.8871 27.0817C45.1362 25.618 42.5321 25.7663 40.9629 27.4153L34.5077 34.1426C33.9891 32.3998 32.373 31.125 30.464 31.125H22.5571C22.0594 30.817 19.2125 27.2685 14.0178 27.7885C11.5045 28.0401 9.24243 29.2174 7.57581 31.125H1.85156C1.07483 31.125 0.445312 31.7545 0.445312 32.5313V46.5938C0.445312 47.3705 1.07483 48 1.85156 48H34.6827C35.105 48 35.5052 47.8103 35.7722 47.4829C35.7722 47.4829 47.4954 33.1205 47.499 33.1161C48.9679 31.2715 48.6973 28.5945 46.8871 27.0817ZM45.3032 31.3587L34.0155 45.1875H3.25781V33.9375H8.24231C8.68909 33.9375 9.10876 33.7152 9.36218 33.382C10.5817 31.7762 12.3347 30.7834 14.298 30.5871C18.2534 30.1908 20.3013 33.0645 21.0974 33.5871C21.3541 33.813 21.6844 33.9375 22.0265 33.9375H30.464C31.2396 33.9375 31.8702 34.5685 31.8702 35.3438C31.8702 36.119 31.2396 36.75 30.464 36.75H22.0265C21.2498 36.75 20.6202 37.3795 20.6202 38.1563C20.6202 38.933 21.2498 39.5625 22.0265 39.5625C30.8588 39.5526 30.4786 39.5867 30.936 39.5354C32.2588 39.6841 33.5706 39.2051 34.4861 38.2273L42.9957 29.3584C43.5498 28.7762 44.4668 28.7242 45.0835 29.2394C45.7236 29.7748 45.8196 30.7043 45.3032 31.3587Z" fill="#2A4359" />
+            <path d="M16.0078 19.6875H23.0391V26.7188C23.0391 27.4955 23.6686 28.125 24.4453 28.125H32.8828C33.6595 28.125 34.2891 27.4955 34.2891 26.7188V19.6875H41.3203C42.097 19.6875 42.7266 19.058 42.7266 18.2812V9.84375C42.7266 9.06702 42.097 8.4375 41.3203 8.4375H34.2891V1.40625C34.2891 0.629517 33.6595 0 32.8828 0H24.4453C23.6686 0 23.0391 0.629517 23.0391 1.40625V8.4375H16.0078C15.2311 8.4375 14.6016 9.06702 14.6016 9.84375V18.2812C14.6016 19.058 15.2311 19.6875 16.0078 19.6875ZM17.4141 11.25H24.4453C25.222 11.25 25.8516 10.6205 25.8516 9.84375V2.8125H31.4766V9.84375C31.4766 10.6205 32.1061 11.25 32.8828 11.25H39.9141V16.875H32.8828C32.1061 16.875 31.4766 17.5045 31.4766 18.2812V25.3125H25.8516V18.2812C25.8516 17.5045 25.222 16.875 24.4453 16.875H17.4141V11.25Z" fill="#2A4359" />
+        </g>
+        <defs>
+            <clipPath id="clip0_888_3270">
+                <rect width="48" height="48" fill="white" transform="translate(0.445312)" />
+            </clipPath>
+        </defs>
+    </svg>
+}
+
+const Fourth = () => {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48" fill="none">
+        <path d="M17.5425 38.1562H3.47998V46.5938H17.5425V38.1562Z" stroke="#2A4359" stroke-width="2.8125" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M31.605 32.5312H17.5425V46.5938H31.605V32.5312Z" stroke="#2A4359" stroke-width="2.8125" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M38.6504 21.2812L41.0567 21.2492C43.6209 21.215 45.6816 19.1266 45.6816 16.5621V14.25H43.3379C40.7491 14.25 38.6504 16.3487 38.6504 18.9375V21.2812Z" stroke="#2A4359" stroke-width="2.8125" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M38.6362 21.2812H36.2925C33.7037 21.2812 31.605 19.1826 31.605 16.5938V14.25H33.9487C36.5375 14.25 38.6362 16.3487 38.6362 18.9375V21.2812Z" stroke="#2A4359" stroke-width="2.8125" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M38.636 11.0625L40.2454 9.45309C42.0231 7.67541 42.0231 4.79325 40.2454 3.01556L38.636 1.40625L37.0266 3.01566C35.2489 4.79334 35.2489 7.6755 37.0266 9.45319L38.636 11.0625Z" stroke="#2A4359" stroke-width="2.8125" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M38.6362 11.0625V26.9062" stroke="#2A4359" stroke-width="2.8125" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M45.6675 26.9062H31.605V46.5938H45.6675V26.9062Z" stroke="#2A4359" stroke-width="2.8125" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M3.41504 29.6873C26.2359 24.6562 24.5484 5.71875 24.5484 1.5" stroke="#2A4359" stroke-width="2.8125" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M20.5708 5.38369L24.5482 1.40625L28.5257 5.38369" stroke="#2A4359" stroke-width="2.8125" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+}
+
+
+
+
+export const processSteps = [
+    {
+        id: 1,
+        title: 'Assessment',
+        description: 'Your story is unique; we listen deeply to understand and tailor our approach to your needs.',
+        icon: First
+    },
+    {
+        id: 2,
+        title: 'Strategy',
+        description: 'Your therapist will craft a targeted plan, implementing therapies and exercises that align with healing.',
+        icon: Second
+    },
+    {
+        id: 3,
+        title: 'Therapy',
+        description: 'Engage in transformative sessions, with compassionate therapists guiding you every step of the way.',
+        icon: Third
+    },
+    {
+        id: 4,
+        title: 'Growth',
+        description: 'Growth and develop resilience that supports your long-term mental health and wellness.',
+        icon: Fourth
+    }
+] as const;
+
+
+const WorkProcess = () => {
+    return (
+        <div className='container section-gap'>
+            <SectionTitle
+                miniTitle='Our Process'
+                subtitle='At Elephant In The Room LLC, we view each challenge as an opportunity for healing and every individual is capable of profound transformation. Our approach combines cutting-edge therapies and personalized care to empower you on your journey to mental health and well-being, addressing concerns from anxiety to trauma with unwavering support.'
+                title='Navigating Towards Wellness Together'
+                sideText
+            />
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-16 relative">
+                {processSteps.map((step, index) => (
+                    <div key={step.id} className="flex flex-col items-center text-center relative">
+                        {/* Connector Line with Arrow */}
+                        {index < processSteps.length - 1 && (
+                            <div className="hidden md:flex absolute top-9 left-[calc(100%+1rem)] -translate-x-1/2 items-center w-16">
+                                <div className="w-full h-[1px] bg-gray-300"></div>
+                                <LuArrowRight className="w-4 h-4 text-gray-400 absolute -right-2" />
+                            </div>
+                        )}
+
+                        {/* Icon Circle */}
+                        <div className="w-[72px] h-[72px] bg-gray-100 rounded-full flex items-center justify-center mb-6 p-4">
+                            <step.icon />
+                        </div>
+
+                        {/* Content */}
+                        <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                            {step.title}
+                        </h3>
+                        <p className="text-sm text-gray-600 leading-relaxed max-w-[280px]">
+                            {step.description}
+                        </p>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+};
+
 export default WorkProcess;
+
