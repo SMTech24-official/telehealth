@@ -27,6 +27,7 @@ export default {
         modelSelect: "#DDEFFF",
         title: "#333",
         subtitle: "#5C5C5C",
+        card: "#EBEBEB",
         bg_highlight: "#5FA38026",
         subTitle: "#666666",
         bg_footer: "#101010",
