@@ -30,7 +30,7 @@ export default function Footer() {
                     {/* VIP Section */}
                     <div className="flex flex-col gap-4 lg:col-span-2">
                         <Logo />
-                        <p className='max-w-sm'>Your trusted partner in luxury yacht experiences in Dubai.</p>
+                        <p className='max-w-sm'>Elephant In The Room LLC, Zina Ortiz and affiliated team of clinicians fully comply with all local and Colorado State cannabis laws, and all federal regulations.</p>
                         <div>
                             <div className="flex space-x-4">
                                 <Link href="#" className="text-gray-300 hover:text-white transition-colors">
