@@ -1,3 +1,4 @@
+import AboutElephant from '@/components/Aboutelephant';
 import Banner from '@/components/Banner';
 import ServicesCategories from '@/components/Categories';
 import Team from '@/components/Team';
@@ -9,6 +10,7 @@ const page = () => {
     return (
         <div>
             <Banner />
+            <AboutElephant />
             <ServicesCategories />
             <Testimonials />
             <WorkProcess />
