@@ -34,7 +34,7 @@ const BlogsSlider = () => {
             whileInView={{ opacity: 1 }} // Animate when in viewport
             viewport={{ once: true, amount: 0.2, }} // Trigger once when 20% visible
             transition={{ duration: 0.7, ease: "easeIn" }}
-            className="section-gap">
+            className="">
 
             <div className="xl:grid lg:grid grid-cols-2 xl:grid-cols-3 gap-4 xl:gap-8 ">
                 <div className="xl:col-span-2">

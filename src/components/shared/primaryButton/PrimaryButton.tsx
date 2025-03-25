@@ -7,7 +7,7 @@ const PrimaryButton = ({
     children,
 }: {
     text?: string;
-    onClick: any;
+    onClick?: any;
     children?: React.ReactNode;
 }) => {
     return children ? (
