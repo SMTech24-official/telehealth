@@ -5,7 +5,7 @@ import second from "@/assets/getInTouch/second.png"
 import third from "@/assets/getInTouch/third.png"
 import fourth from "@/assets/getInTouch/fourth.png"
 import Image from "next/image";
-
+import { motion } from 'framer-motion';
 interface HeaderProps {
     backgroundImage: string;
     height: string;
@@ -18,12 +18,17 @@ const GetInTouch = ({
     children
 }: HeaderProps) => {
     return (
-        <div className=" container section-gap relative mb-20">
+        <motion.div
+            initial={{ opacity: 0 }} // Start slightly below
+            animate
+            whileInView={{ opacity: 1 }} // Animate when in viewport
+            viewport={{ once: true, amount: 0.4, }} // Trigger once when 20% visible
+            transition={{ duration: 0.4, ease: "easeIn" }} className=" container section-gap relative mb-20">
             <div
                 style={{
                     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("${backgroundImage}")`,
                 }}
-                className={`w-full ${height} relative bg-cover bg-center bg-no-repeat flex flex-col items-start justify-center text-white px-4 rounded-xl`}
+                className={` ${height} relative bg-cover bg-center bg-no-repeat flex flex-col items-start justify-center text-white sm:px-4 rounded-xl`}
             >
                 {children}
             </div>
@@ -61,7 +66,7 @@ const GetInTouch = ({
             </div>
 
 
-        </div>
+        </motion.div>
     );
 };
 

@@ -77,7 +77,8 @@ const Testimonials = () => {
             animate
             whileInView={{ opacity: 1 }} // Animate when in viewport
             viewport={{ once: true, amount: 0.4, }} // Trigger once when 20% visible
-            transition={{ duration: 0.4, ease: "easeIn" }} className=' bg-primary'>
+            transition={{ duration: 0.4, ease: "easeIn" }}
+            className=' bg-primary'>
             <div className="container section-gap">
                 <div className=' !text-white'>
                     <SectionTitle white miniTitle='Testimonials' subtitle='Hear from our satisfied clients who have found clarity, confidence, and healing through our therapy sessions. Their stories reflect the care, support, and transformation we bring to every journey. ' title='What client says ?' />

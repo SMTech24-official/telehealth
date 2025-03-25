@@ -16,7 +16,7 @@ const PrimaryButton = ({
         <button
             type="submit"
             onClick={onClick}
-            className="xl:px-6 px-4 py-2 xl:py-4 rounded-full bg-secondary/80 transition-all duration-300 text-white hover:bg-secondary shadow cursor-pointer"
+            className="xl:px-6 px-1 sm:px-4 py-2 xl:py-4 rounded-full text-sm bg-secondary/80 transition-all duration-300 text-white hover:bg-secondary shadow cursor-pointer"
         >
             {text}
         </button>

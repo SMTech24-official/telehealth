@@ -1,6 +1,7 @@
+"use client"
 import { LuArrowRight } from 'react-icons/lu';
 import SectionTitle from './shared/sectionTitle/SectionTitle';
-
+import { motion } from 'framer-motion';
 
 
 const First = () => {
@@ -109,7 +110,12 @@ const WorkProcess = () => {
             />
             <div className="grid grid-cols-1 md:grid-cols-4 gap-16 relative">
                 {processSteps.map((step, index) => (
-                    <div key={step.id} className="flex flex-col items-center text-center relative">
+                    <motion.div
+                        initial={{ opacity: 0 }} // Start slightly below
+                        animate
+                        whileInView={{ opacity: 1 }} // Animate when in viewport
+                        viewport={{ once: true, amount: 0.2, }} // Trigger once when 20% visible
+                        transition={{ duration: 0.6, delay: 0.1 * step.id, ease: "easeIn" }} key={step.id} className="flex flex-col items-center text-center relative">
                         {/* Connector Line with Arrow */}
                         {index < processSteps.length - 1 && (
                             <div className="hidden md:flex absolute top-9 left-[calc(100%+1rem)] -translate-x-1/2 items-center w-16">
@@ -130,7 +136,7 @@ const WorkProcess = () => {
                         <p className="text-sm text-gray-600 leading-relaxed max-w-[280px]">
                             {step.description}
                         </p>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </div>

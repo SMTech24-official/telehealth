@@ -30,11 +30,11 @@ const page = () => {
             >
                 <SectionTitle miniTitle="Get In Touch" subtitle="Seeking support for managing stress and anxiety related to work and personal life? Interested in exploring coping strategies and developing a healthier mindset? Please complete the form and our team will get back to you as soon as possible." title="Get In Contact With Us" white />
                 {/* Search Bar */}
-                <div className="flex items-center gap-2 bg-white rounded-full  p-1 lg:p-2 shadow-sm max-w-xl">
+                <div className="flex items-center gap-2 bg-white rounded-full p-1 lg:p-2 shadow-sm max-w-xl">
                     <input
                         type="text"
                         placeholder="Enter Your email address"
-                        className="flex-1 outline-none px-2"
+                        className="outline-none px-1 sm:px-2 "
                     />
                     <PrimaryButton text='GET IN TOUCH' />
                 </div>

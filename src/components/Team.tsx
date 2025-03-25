@@ -1,7 +1,8 @@
-import React from 'react';
+"use client";
+import { motion } from 'framer-motion';
 import Image from 'next/image';
-import SectionTitle from './shared/sectionTitle/SectionTitle';
 import { BsArrowUpRight } from 'react-icons/bs';
+import SectionTitle from './shared/sectionTitle/SectionTitle';
 
 // Fake data
 const teamMembers = [
@@ -44,7 +45,14 @@ const Team = () => {
 
             <div className="flex items-center justify-center flex-wrap gap-6">
                 {teamMembers.map((member) => (
-                    <div key={member.id} className="relative group w-[320px] sm:w-[300px] lg:w-[400px] 2xl:w-[500px] h-[320px] lg:h-[400px] 2xl:h-[491px] rounded-2xl overflow-hidden cursor-pointer shadow-lg">
+                    <motion.div
+                        key={member.id}
+                        className="relative group w-[320px] sm:w-[300px] lg:w-[400px] 2xl:w-[500px] h-[320px] lg:h-[400px] 2xl:h-[491px] rounded-2xl overflow-hidden cursor-pointer shadow-lg"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.1 * member.id }}
+                        viewport={{ once: true, amount: 0.2 }}  // Trigger animation when 30% of the component is in view
+                    >
                         <Image
                             src={member.imageUrl}
                             alt={`${member.name}'s Profile`}
@@ -61,7 +69,7 @@ const Team = () => {
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </div>
