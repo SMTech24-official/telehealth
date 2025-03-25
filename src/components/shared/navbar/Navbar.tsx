@@ -13,16 +13,17 @@ export const navItems = [
     {
         name: "Our Services",
         subLink: [
-            { name: "EMDR Therapy", link: "/project" },
-            { name: "Somatic Psychotherapy", link: "/consultation" },
-            { name: "Brain spotting Therapy", link: "/consultation" },
-            { name: "Psychedelic Assisted Therapy", link: "/consultation" },
-            { name: "Sensorimotor Psychotherapy", link: "/consultation" },
-            { name: "Rapid Resolution Therapy", link: "/consultation" },
-            { name: "Virtual Therapy", link: "/consultation" },
-            { name: "Psychedelic Integration", link: "/consultation" },
-            { name: "Guided Meditation", link: "/consultation" },
-            { name: "EMDR Consultation", link: "/consultation" },
+            { name: "Virtual Therapy", link: "/services/virtual-therapy" },
+            { name: "Virtual", link: "/services/virtual" },
+            { name: "EMDR Therapy", link: "/services/emdr-therapy" },
+            { name: "EMDR Consultation", link: "/services/emdr-consultation" },
+            { name: "Rapid Resolution Therapy", link: "/services/rapid-resolution-therapy" },
+            { name: "Sensorimotor Psychotherapy", link: "/services/sensorimotor-psychotherapy" },
+            { name: "Somatic Psychotherapy", link: "/services/somatic-psychotherapy" },
+            { name: "Brainspotting Therapy", link: "/services/brainspotting-therapy" },
+            { name: "Mindfulness Meditation", link: "/services/mindfulness-meditation" },
+            { name: "Psychedelic Assisted Therapy", link: "/services/psychedelic-assisted-therapy" },
+            { name: "Psychedelic Integration", link: "/services/psychedelic-integration" },
         ],
     },
     // {
@@ -46,11 +47,11 @@ export const navItems = [
 
     {
         name: "Telehealth",
-        link: "/blog",
+        link: "/telehealth-therapy",
     },
     {
         name: "Affiliate",
-        link: "/faq",
+        link: "/affiliate",
     },
     // {
     //     name: "Blog",
@@ -58,7 +59,7 @@ export const navItems = [
     // },
     {
         name: "Contact",
-        link: "/faq",
+        link: "/contact-us",
     },
 ];
 
@@ -125,7 +126,7 @@ const Navbar = () => {
                     {/* User Dropdown */}
                     <div className="flex items-center justify-end gap-4">
 
-                        <Link href={"/signIn"}>
+                        <Link href={"/therapy-consultation"}>
                             <button className="flex items-center gap-2 text-white pb-1 border-dashed border-b-2">
                                 <span>MAKE AN APPOINTMENT</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
