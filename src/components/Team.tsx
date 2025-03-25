@@ -3,33 +3,37 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { BsArrowUpRight } from 'react-icons/bs';
 import SectionTitle from './shared/sectionTitle/SectionTitle';
-
+import zina from "@/assets/team/Ortiz-439-qygbv1agej6ve0kx6n4ikx5id9bjkfqrmcwxpz0dja.jpg"
+import gali from "@/assets/team/Gail-Dawson-Cropped-Compressed.jpg"
+import lena from "@/assets/team/Lena-Costalas-Cropped-Compressed.jpg"
+import issac from "@/assets/team/Isaac-Coleman-Cropped-Compressed.jpg"
+import Eva from "@/assets/team/Eva-Cruz-Cropped-Compressed.jpg"
 // Fake data
 const teamMembers = [
     {
         id: 1,
         name: 'Zina Ortiz',
-        imageUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=800&h=800',
+        imageUrl: zina,
     },
     {
         id: 2,
         name: 'John Doe',
-        imageUrl: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&q=80&w=800&h=800',
+        imageUrl: gali,
     },
     {
         id: 3,
         name: 'Anna Smith',
-        imageUrl: 'https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&q=80&w=800&h=800',
+        imageUrl: lena,
     },
     {
         id: 4,
         name: 'Michael Lee',
-        imageUrl: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&q=80&w=800&h=800',
+        imageUrl: issac,
     },
     {
         id: 5,
         name: 'Emily Johnson',
-        imageUrl: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=800&h=800',
+        imageUrl: Eva,
     },
 ];
 

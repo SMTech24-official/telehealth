@@ -4,7 +4,8 @@ import { LuShield, LuUsers } from 'react-icons/lu';
 import SectionTitle from './shared/sectionTitle/SectionTitle';
 import Image from 'next/image';
 import { motion } from 'framer-motion'; // Import framer motion
-
+import img1 from "@/assets/about/psychiatrists-doctor-provide-mental-health-counsel-74S9LDRa.jpg"
+import img2 from "@/assets/about/10-Qualities-to-Look-for-in-a-Sensorimotor-Psychotherapist-1-768x432.jpg"
 export default function AboutElephant() {
     return (
         <div className="container section-gap">
@@ -25,7 +26,7 @@ export default function AboutElephant() {
                         className="row-span-4 col-span-1 h-full relative rounded-2xl overflow-hidden"
                     >
                         <Image
-                            src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80"
+                            src={img1}
                             alt="Therapy session"
                             width={400}
                             height={700}
@@ -41,7 +42,7 @@ export default function AboutElephant() {
                         className="row-span-3 col-start-2 col-span-1 h-full relative rounded-2xl overflow-hidden"
                     >
                         <Image
-                            src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80"
+                            src={img2}
                             alt="Professional therapist"
                             width={400}
                             height={700}

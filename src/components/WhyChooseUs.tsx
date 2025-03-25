@@ -2,6 +2,9 @@
 import Image from 'next/image';
 import SectionTitle from './shared/sectionTitle/SectionTitle';
 import { motion } from 'framer-motion';
+import img1 from "@/assets/whyChose/positive-african-american-couple-hugging-after-rec-PFLEMJZ.jpg"
+import img2 from "@/assets/whyChose/support-prayer-and-trust-with-people-holding-hands-BRKJAD3.jpg"
+
 
 const Listicon = () => (
     <svg className='min-w-6 min-h-6' xmlns="http://www.w3.org/2000/svg" width="20" height="28" viewBox="0 0 20 26" fill="none">
@@ -80,11 +83,11 @@ export default function WhyChooseUs() {
                         viewport={{ once: true }}
                     >
                         <Image
-                            src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80"
+                            src={img1}
                             alt="Therapy session"
                             width={600}
                             height={700}
-                            className="lg:w-[680px] w-[500px] h-[500px] lg:h-[580px] object-cover"
+                            className="lg:w-[680px] w-[500px] h-[500px] lg:h-[580px] object-contain"
                         />
                     </motion.div>
 
@@ -96,7 +99,7 @@ export default function WhyChooseUs() {
                         viewport={{ once: true }}
                     >
                         <Image
-                            src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80"
+                            src={img2}
                             alt="Professional therapist"
                             width={600}
                             height={700}
