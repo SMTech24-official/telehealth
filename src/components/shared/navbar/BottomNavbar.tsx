@@ -6,19 +6,11 @@ import { FaUserFriends, FaLaptopMedical, FaBriefcase, FaHandshake, FaPhoneAlt } 
 
 
 const navItems = [
-<<<<<<< HEAD
     { icon: FaUserFriends, label: "Therapist", href: "/my-therapist" }, 
     { icon: FaLaptopMedical, label: "Services", href: "/services" }, 
     { icon: FaBriefcase, label: "Telehealth", href: "/telehealth" }, 
     { icon: FaHandshake, label: "Affiliate", href: "/affiliate" }, 
     { icon: FaPhoneAlt, label: "Contact", href: "/contact" }, 
-=======
-    { icon: FaUserFriends, label: "Team", href: "/team" }, // Represents the team members or project-related work
-    { icon: FaLaptopMedical, label: "Services", href: "/services" }, // Medical services or telehealth consultation
-    { icon: FaBriefcase, label: "Telehealth", href: "/telehealth" }, // Telehealth or online healthcare services
-    { icon: FaHandshake, label: "Affiliate", href: "/affiliate" }, // Affiliate or partnership programs
-    { icon: FaPhoneAlt, label: "Contact", href: "/contact" }, // Contact information or support
->>>>>>> origin/main
 ];
 
 const BottomNavbar = () => {

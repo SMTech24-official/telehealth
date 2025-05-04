@@ -36,7 +36,6 @@ body {
 
 html {
   scroll-behavior: smooth;
-<<<<<<< HEAD
 }
 
 @keyframes ripple {
@@ -52,6 +51,4 @@ html {
   100% {
     background-color: transparent;
   }
-=======
->>>>>>> origin/main
 }

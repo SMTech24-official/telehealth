@@ -7,7 +7,6 @@ import Logo from "./Logo";
 
 export const navItems = [
     {
-<<<<<<< HEAD
         name: "My Therapist",
         link: "/my-therapist",
     },
@@ -26,25 +25,6 @@ export const navItems = [
             { name: "Mindfulness Meditation", link: "/our-services/mindfulness-meditation" },
             { name: "Psychedelic Assisted Therapy", link: "/our-services/psychedelic-assisted-therapy" },
             { name: "Psychedelic Integration", link: "/our-services/psychedelic-integration" },
-=======
-        name: "Our Team",
-        link: "/",
-    },
-    {
-        name: "Our Services",
-        subLink: [
-            { name: "Virtual Therapy", link: "/services/virtual-therapy" },
-            { name: "Virtual", link: "/services/virtual" },
-            { name: "EMDR Therapy", link: "/services/emdr-therapy" },
-            { name: "EMDR Consultation", link: "/services/emdr-consultation" },
-            { name: "Rapid Resolution Therapy", link: "/services/rapid-resolution-therapy" },
-            { name: "Sensorimotor Psychotherapy", link: "/services/sensorimotor-psychotherapy" },
-            { name: "Somatic Psychotherapy", link: "/services/somatic-psychotherapy" },
-            { name: "Brainspotting Therapy", link: "/services/brainspotting-therapy" },
-            { name: "Mindfulness Meditation", link: "/services/mindfulness-meditation" },
-            { name: "Psychedelic Assisted Therapy", link: "/services/psychedelic-assisted-therapy" },
-            { name: "Psychedelic Integration", link: "/services/psychedelic-integration" },
->>>>>>> origin/main
         ],
     },
     // {
@@ -66,21 +46,12 @@ export const navItems = [
     //     link: "/messaging",
     // },
 
-<<<<<<< HEAD
     // {
     //     name: "Telehealth",
     //     link: "/telehealth-therapy",
     // },
     {
         name: "For Professionals",
-=======
-    {
-        name: "Telehealth",
-        link: "/telehealth-therapy",
-    },
-    {
-        name: "Affiliate",
->>>>>>> origin/main
         link: "/affiliate",
     },
     // {
@@ -122,11 +93,7 @@ const Navbar = () => {
                                 <li key={idx} className="relative group">
                                     {item.subLink ? (
                                         <>
-<<<<<<< HEAD
                                             <Link href={item.link ?? "#"} className="cursor-pointer text-white text-lg flex items-center ">{item.name} <IoIosArrowDown className="w-4 h-4 mt-1 group-hover:rotate-180 transition-all duration-300 text-nowrap" /></Link>
-=======
-                                            <span className="cursor-pointer text-white text-lg flex items-center ">{item.name} <IoIosArrowDown className="w-4 h-4 mt-1 group-hover:rotate-180 transition-all duration-300 text-nowrap" /></span>
->>>>>>> origin/main
 
                                             <div className="absolute transform origin-top-left scale-0 group-hover:scale-100  transition-transform  top-4 -left-2/3 flex flex-col gap-2 p-4 min-w-44 rounded-lg bg-transparent z-50 ">
                                                 <div className=" navSubLinkTwo  bg-slate-200 p-[1px] ">

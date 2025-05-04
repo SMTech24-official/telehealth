@@ -14,11 +14,7 @@ import PrimaryButton from '@/components/shared/primaryButton/PrimaryButton';
 
 const page = () => {
     return (
-<<<<<<< HEAD
         <div className='overflow-hidden'>
-=======
-        <div>
->>>>>>> origin/main
             <Banner />
             <AboutElephant />
             <ServicesCategories />

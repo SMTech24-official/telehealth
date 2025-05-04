@@ -8,7 +8,6 @@ type Service = {
 };
 
 const services: Service[] = [
-<<<<<<< HEAD
     { name: "Virtual Therapy", link: "/our-services/virtual-therapy" },
     { name: "Virtual", link: "/our-services/virtual" },
     { name: "EMDR Therapy", link: "/our-services/emdr-therapy" },
@@ -20,19 +19,6 @@ const services: Service[] = [
     { name: "Mindfulness Meditation", link: "/our-services/mindfulness-meditation" },
     { name: "Psychedelic Assisted Therapy", link: "/our-services/psychedelic-assisted-therapy" },
     { name: "Psychedelic Integration", link: "/our-services/psychedelic-integration" },
-=======
-    { name: "Virtual Therapy", link: "/services/virtual-therapy" },
-    { name: "Virtual", link: "/services/virtual" },
-    { name: "EMDR Therapy", link: "/services/emdr-therapy" },
-    { name: "EMDR Consultation", link: "/services/emdr-consultation" },
-    { name: "Rapid Resolution Therapy", link: "/services/rapid-resolution-therapy" },
-    { name: "Sensorimotor Psychotherapy", link: "/services/sensorimotor-psychotherapy" },
-    { name: "Somatic Psychotherapy", link: "/services/somatic-psychotherapy" },
-    { name: "Brainspotting Therapy", link: "/services/brainspotting-therapy" },
-    { name: "Mindfulness Meditation", link: "/services/mindfulness-meditation" },
-    { name: "Psychedelic Assisted Therapy", link: "/services/psychedelic-assisted-therapy" },
-    { name: "Psychedelic Integration", link: "/services/psychedelic-integration" },
->>>>>>> origin/main
 ];
 
 
@@ -134,20 +120,12 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
-<<<<<<< HEAD
                                 <Link href="/rates-insurance" className="text-gray-300 hover:text-secondary transition-colors">
-=======
-                                <Link href="/contactUs" className="text-gray-300 hover:text-secondary transition-colors">
->>>>>>> origin/main
                                     Rates & Insurance
                                 </Link>
                             </li>
                             <li>
-<<<<<<< HEAD
                                 <Link href="/blog" className="text-gray-300 hover:text-secondary transition-colors">
-=======
-                                <Link href="/contactUs" className="text-gray-300 hover:text-secondary transition-colors">
->>>>>>> origin/main
                                     Blog
                                 </Link>
                             </li>
