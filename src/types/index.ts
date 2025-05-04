@@ -1,0 +1,41 @@
+export type Clinician = {
+  id: string;
+  userId: string;
+  email: string;
+  name: string;
+  practice: string;
+  image: string | null;
+  qualifications: string;
+  descriptions: string;
+  about: string;
+  portfolioLink: string;
+  therapeuticMethods: string[];
+  specialities: string[];
+  serviceTypes: string[];
+  agesServed: string[];
+  latitude: number;
+  longitude: number;
+  location: string;
+  availabilityDay: string;
+  availabilityTime: string;
+  telehealthOnly: boolean;
+  isCalendarConnected: boolean;
+  googleRefreshToken: string | null;
+  createdAt: string;
+  updatedAt: string;
+};
+
+export type ClinicianCardProps = {
+    id: string;
+    name: string;
+    practice: string;
+    descriptions: string;
+    qualifications: string;
+    image: string | null;
+    location: string;
+    telehealthOnly: boolean;
+    specialities: string[];
+    onMessage: () => void;
+    onVisitProfile: () => void;
+    onLocation: () => void;
+  };
