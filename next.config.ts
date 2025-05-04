@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
+<<<<<<< HEAD
         protocol: "http",
         hostname: "localhost",
         port: "6001",
@@ -18,6 +19,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "img.freepik.com",
         pathname: "/**",
+=======
+        protocol: "https",
+        hostname: "**", // Allows all hostnames
+>>>>>>> origin/main
       },
     ],
   },

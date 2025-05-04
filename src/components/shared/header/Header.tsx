@@ -17,7 +17,11 @@ interface HeroHeaderProps {
 export default function HeroHeader({
     title,
     breadcrumbs,
+<<<<<<< HEAD
     imageUrl = "https://img.freepik.com/free-photo/technology-communication-icons-symbols-concept_53876-120314.jpg?uid=R110243807&ga=GA1.1.1088808881.1737022066&semt=ais_hybrid",
+=======
+    imageUrl = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-DUK5MyADrKQ9XdZGpwFiY6IBpTMVfB.png",
+>>>>>>> origin/main
     className = "",
 }: HeroHeaderProps) {
     return (

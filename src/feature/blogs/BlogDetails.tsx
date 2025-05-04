@@ -1,6 +1,10 @@
 "use client"
 import HeroHeader from '@/components/shared/header/Header';
 import React from 'react';
+<<<<<<< HEAD
+=======
+import blogHeader from "@/assets/header/blogHeader.png";
+>>>>>>> origin/main
 import SectionTitle from '@/components/shared/sectionTitle/SectionTitle';
 import { useRouter } from 'next/navigation';
 import PrimaryButton from '@/components/shared/primaryButton/PrimaryButton';
@@ -28,7 +32,11 @@ const BlogDetails = () => {
 
     return (
         <div>
+<<<<<<< HEAD
             <HeroHeader breadcrumbs={breadcrumbs} title={dummyBlogData.title} />
+=======
+            <HeroHeader breadcrumbs={breadcrumbs} title={dummyBlogData.title} imageUrl={blogHeader.src} />
+>>>>>>> origin/main
             {/* Blog details section */}
             <div className='container space-y-6 mb-10' >
                 <p className='text-lg'>{dummyBlogData.date}</p>

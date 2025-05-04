@@ -53,7 +53,11 @@ const BlogsSlider = () => {
                         onSlideChange={(swiper) => setCurrentImage(swiper.realIndex)}
                     >
                         {blogPosts.map((post, index) => (
+<<<<<<< HEAD
                             <SwiperSlide key={index} className="rounded-lg group">
+=======
+                            <SwiperSlide key={index} className="rounded-lg group ">
+>>>>>>> origin/main
                                 <div className="relative w-full h-full rounded-lg overflow-hidden">
                                     <Image
                                         src={post.image || "/placeholder.svg"}
@@ -72,6 +76,7 @@ const BlogsSlider = () => {
                         ))}
                     </Swiper>
                 </div>
+<<<<<<< HEAD
                 <div className='bg-secondary/40 p-2 rounded-lg'>
                     <p className='text-lg my-1 font-semibold text-black'>Latest Blog</p>
                     <div className="xl:max-w-2xl xl:mx-auto xl:space-y-8 lg:flex-col md:flex hidden ">
@@ -96,6 +101,29 @@ const BlogsSlider = () => {
                             </Link>
                         ))}
                     </div>
+=======
+                <div className="xl:max-w-2xl xl:mx-auto xl:space-y-8 lg:flex-col md:flex hidden">
+                    {blogPosts.map((post) => (
+                        <Link
+                            key={post.slug}
+                            href={`/blog/${post.slug}`}
+                            className={`flex group items-center justify-center gap-4 p-4 rounded-lg hover:bg-gray-100 transition-colors ${currentImage === (Number.parseInt(post.id) - 1) ? "bg-gray-100" : ""}`}
+                        >
+                            <div className="relative xl:w-40 lg:w-28 w-20 h-20 lg:h-28 xl:h-40 flex-shrink-0 overflow-hidden">
+                                <Image
+                                    src={post.image || "/placeholder.svg"}
+                                    alt={post.title}
+                                    fill
+                                    className="rounded-lg object-cover group-hover:scale-110 transition-all duration-300"
+                                />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                                <h3 className="xl:text-xl lg:text-base text-sm font-semibold text-gray-900 mb-1">{post.title}</h3>
+                                <time className="text-sm text-gray-500">{post.date}</time>
+                            </div>
+                        </Link>
+                    ))}
+>>>>>>> origin/main
                 </div>
             </div>
         </motion.div>
