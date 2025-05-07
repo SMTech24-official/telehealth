@@ -308,7 +308,7 @@ const MyTherapist = () => {
               ))}
             </select>
 
-            <select
+            {/* <select
               value={activeFilters.insurance || ""}
               onChange={(e) => handleFilterChange("insurance", e.target.value)}
               className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -322,102 +322,8 @@ const MyTherapist = () => {
                   {option}
                 </option>
               ))}
-            </select>
-
-            <button
-              onClick={() => setShowMoreFilters(!showMoreFilters)}
-              className="text-blue-500 hover:text-blue-700 flex items-center gap-1"
-            >
-              {showMoreFilters ? "Hide filters" : "More filters"}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className={`h-4 w-4 transition-transform ${
-                  showMoreFilters ? "rotate-180" : ""
-                }`}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        {/* Expanded Filters */}
-        {showMoreFilters && (
-          <div className="mt-4 pt-4 border-t border-gray-200 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            </select> */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Care Type
-              </label>
-              <select
-                value={activeFilters.careType || ""}
-                onChange={(e) => handleFilterChange("careType", e.target.value)}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                <option value="">All</option>
-                {FILTER_OPTIONS.careType.map((option) => (
-                  <option key={option} value={option.toLowerCase()}>
-                    {option}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Payment Method
-              </label>
-              <select
-                value={activeFilters.payMethod || ""}
-                onChange={(e) =>
-                  handleFilterChange("payMethod", e.target.value)
-                }
-                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                <option value="">All</option>
-                {FILTER_OPTIONS.payMethod.map((option) => (
-                  <option
-                    key={option}
-                    value={option.toLowerCase().replace(" ", "-")}
-                  >
-                    {option}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Price Range
-              </label>
-              <select
-                value={activeFilters.pocket || ""}
-                onChange={(e) => handleFilterChange("pocket", e.target.value)}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                <option value="">All</option>
-                {FILTER_OPTIONS.pocket.map((option) => (
-                  <option
-                    key={option}
-                    value={option.toLowerCase().replace(/[^a-z0-9_]/g, "_")}
-                  >
-                    {option}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Day of Week
-              </label>
               <select
                 value={activeFilters.dayOfWeek || ""}
                 onChange={(e) =>
@@ -433,29 +339,7 @@ const MyTherapist = () => {
                 ))}
               </select>
             </div>
-
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Time of Day
-              </label>
-              <select
-                value={activeFilters.time || ""}
-                onChange={(e) => handleFilterChange("time", e.target.value)}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                <option value="">Any time</option>
-                {FILTER_OPTIONS.time.map((option) => (
-                  <option key={option} value={option.toLowerCase()}>
-                    {option}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Treatment Approach
-              </label>
               <select
                 value={activeFilters.treatments || ""}
                 onChange={(e) =>
@@ -471,8 +355,22 @@ const MyTherapist = () => {
                 ))}
               </select>
             </div>
+            <div>
+              <select
+                value={activeFilters.time || ""}
+                onChange={(e) => handleFilterChange("time", e.target.value)}
+                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="">Any time</option>
+                {FILTER_OPTIONS.time.map((option) => (
+                  <option key={option} value={option.toLowerCase()}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
-        )}
+        </div>
       </div>
 
       {/* Active Filters */}
