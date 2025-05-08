@@ -1,3 +1,23 @@
+
+export enum AvailabilityDay {
+  Monday = "Monday",
+  Tuesday = "Tuesday",
+  Wednesday = "Wednesday",
+  Thursday = "Thursday",
+  Friday = "Friday",
+  Saturday = "Saturday",
+  Sunday = "Sunday",
+  AnyDay = "AnyDay"
+}
+
+export enum AvailabilityTime {
+  Morning = "Morning",
+  Noon = "Noon",
+  Afternoon = "Afternoon",
+  Evening = "Evening",
+  Night = "Night",
+  AnyTime = "AnyTime"
+}
 export type Clinician = {
   id: string;
   userId: string;
@@ -16,8 +36,8 @@ export type Clinician = {
   latitude: number;
   longitude: number;
   location: string;
-  availabilityDay: string;
-  availabilityTime: string;
+  availabilityDay: AvailabilityDay[];
+  availabilityTime: AvailabilityTime[];
   telehealthOnly: boolean;
   isCalendarConnected: boolean;
   googleRefreshToken: string | null;

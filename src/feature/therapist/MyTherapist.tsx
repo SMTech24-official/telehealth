@@ -5,7 +5,12 @@ import { useEffect, useRef, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Tag } from "./card/Tag";
 import { ClinicianCard } from "./card/ClinicianCard";
-import { useGetAllClinicianQuery } from "@/redux/api/clinicianApi";
+import {
+  useGetAllClinicianQuery,
+  useGetAllServiceTypeQuery,
+  useGetAllSpecialitiesQuery,
+  useGetAllTherapeuticMethodsQuery,
+} from "@/redux/api/clinicianApi";
 import Loading from "@/components/Loading";
 import { Clinician } from "@/types";
 import mapboxgl from "mapbox-gl";
@@ -85,6 +90,9 @@ const MyTherapist = () => {
     latitude: null,
     longitude: null,
   });
+  const { data: serviceTypeData } = useGetAllServiceTypeQuery("");
+  const { data: therapeuticMethodData } = useGetAllTherapeuticMethodsQuery("");
+  const { data: specialityData } = useGetAllSpecialitiesQuery("");
 
   // Get active filters from URL
   const activeFilters = Array.from(searchParams.entries()).reduce(

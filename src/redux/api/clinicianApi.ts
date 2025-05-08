@@ -30,6 +30,25 @@ const authApi = baseApi.injectEndpoints({
         method: "GET",
       }),
     }),
+
+    getAllSpecialities: build.query({
+      query: (query: any) => ({
+        url: `/clinician/get-all-specialities/${query}`,
+        method: "GET",
+      }),
+    }),
+    getAllTherapeuticMethods: build.query({
+      query: (query: any) => ({
+        url: `/clinician/get-all-therapeutic-method/${query}`,
+        method: "GET",
+      }),
+    }),
+    getAllServiceType: build.query({
+      query: (query: any) => ({
+        url: `/clinician/get-all-service-type/${query}`,
+        method: "GET",
+      }),
+    }),
   }),
 });
 
@@ -37,4 +56,7 @@ export const {
   useGetSingleClinicianQuery,
   useCreateUserMutation,
   useGetAllClinicianQuery,
+  useGetAllSpecialitiesQuery,
+  useGetAllTherapeuticMethodsQuery,
+  useGetAllServiceTypeQuery,
 } = authApi;
